@@ -293,10 +293,12 @@ def main():
         f"""
         <style>
         .stApp {{
-            background-image: url("https://i.imgur.com/hFVHclE.jpeg");
+            background-image: url("https://images.unsplash.com/photo-1589859762194-eaae75c61f64?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: 100%;  // Adjust this value to control the zoom level
             background-position: center center;
-            background-repeat: no-repeat;          
+            background-repeat: no-repeat;
+            color: white !important; /* White text color for readability */
+            font-weight: bold; /* Makes text bold */
         }}
         .dataframe-container, .dataframe-container table, .dataframe-container table tr, .dataframe-container table tr th, .dataframe-container table tr td {{
         background-color: black !important; /* Black background for tables */
@@ -370,7 +372,7 @@ def display_data():
         
         filtered_data = st.session_state['financial_data'][st.session_state['financial_data']['Quarter'] == selected_quarter]
         transposed_data = filtered_data.transpose()
-        st.table(transposed_data)
+        st.dataframe(transposed_data)
         
         bank_name = st.text_input("Please enter the bank name as provided above:", key="bank_name")
         cert_no_again = st.session_state['basic_info']['RSS ID']  # Assuming the certificate number is stored here
