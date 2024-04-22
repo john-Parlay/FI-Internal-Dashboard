@@ -383,7 +383,7 @@ def display_data():
         cert_no_again = st.session_state['basic_info']['RSS ID']  # Assuming the certificate number is stored here
         
         if bank_name and cert_no_again:
-            fetch_sba_details = st.button("Fetch SBA Details")
+            fetch_sba_details = st.button("SBA Details")
             if fetch_sba_details:
                 try:
                     # Fetch and display SBA details
