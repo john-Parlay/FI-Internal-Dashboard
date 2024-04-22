@@ -305,7 +305,7 @@ def main():
         color: white !important; /* White text color for readability */
         font-weight: bold; /* Makes text bold */
         }}
-        .button {{
+        div.stButton {{
         color: black;
         font-weight: bold;
         }}
