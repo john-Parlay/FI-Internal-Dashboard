@@ -305,6 +305,11 @@ def main():
         color: white !important; /* White text color for readability */
         font-weight: bold; /* Makes text bold */
         }}
+        .button {{
+        background-color: black
+        color: white !important;
+        font-weight: bold;
+        }}
         </style>
         """,
         unsafe_allow_html=True
@@ -374,7 +379,6 @@ def display_data():
         transposed_data = filtered_data.transpose()
         st.dataframe(transposed_data)
         
-        # bank_name = st.text_input("Please enter the bank name as provided above:", key="bank_name")
         bank_name =st.session_state['basic_info']['Name']
         cert_no_again = st.session_state['basic_info']['RSS ID']  # Assuming the certificate number is stored here
         
