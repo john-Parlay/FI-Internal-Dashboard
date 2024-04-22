@@ -125,13 +125,12 @@ def get_final_data(CERT_NO, start_date):
 
     return final_data
 
-
 def sba_data_2020_present():
-    df = pd.read_csv('https://data.sba.gov/dataset/0ff8e8e9-b967-4f4e-987c-6ac78c575087/resource/3e4231a6-fd69-409f-ac4a-62b7b7592d84/download/foia-7afy2020-present-asof_231231.csv',encoding='ISO-8859-1')
+    df = pd.read_csv('https://data.sba.gov/dataset/0ff8e8e9-b967-4f4e-987c-6ac78c575087/resource/3e4231a6-fd69-409f-ac4a-62b7b7592d84/download/foia-7afy2020-present-asof-240331.csv',encoding='ISO-8859-1')
     return df 
 
 def sba_data_2019():
-    df = pd.read_csv('https://data.sba.gov/dataset/0ff8e8e9-b967-4f4e-987c-6ac78c575087/resource/40e6d1ef-5853-4bf6-866d-79d91722e2e1/download/foia-7afy2010-fy2019-asof-231231.csv',encoding='ISO-8859-1')
+    df = pd.read_csv('https://data.sba.gov/dataset/0ff8e8e9-b967-4f4e-987c-6ac78c575087/resource/40e6d1ef-5853-4bf6-866d-79d91722e2e1/download/foia-7afy2010-fy2019-asof-240331.csv',encoding='ISO-8859-1')
     df_2019 = df[df['ApprovalFiscalYear'] == 2019]
     return df_2019
 
