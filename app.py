@@ -306,8 +306,7 @@ def main():
         font-weight: bold; /* Makes text bold */
         }}
         .button {{
-        background-color: black
-        color: white !important;
+        color: black;
         font-weight: bold;
         }}
         </style>
