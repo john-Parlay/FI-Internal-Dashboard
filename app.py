@@ -319,7 +319,7 @@ def main():
     CERT_NO = st.number_input("Enter the CERT number:", key="cert_no")
     start_date = st.date_input("Enter the start date (yyyy-mm-dd):", key="start_date")
 
-    fetch_button = st.button('Fetch Data')
+    fetch_button = st.button('Get FDIC Data')
 
     # Check if it's the initial load or a fetch button has been pressed
     if fetch_button or not st.session_state.get('data_fetched', False):
@@ -382,7 +382,7 @@ def display_data():
         cert_no_again = st.session_state['basic_info']['RSS ID']  # Assuming the certificate number is stored here
         
         if bank_name and cert_no_again:
-            fetch_sba_details = st.button("SBA Details")
+            fetch_sba_details = st.button("Get SBA Details")
             if fetch_sba_details:
                 try:
                     # Fetch and display SBA details
