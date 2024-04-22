@@ -374,7 +374,8 @@ def display_data():
         transposed_data = filtered_data.transpose()
         st.dataframe(transposed_data)
         
-        bank_name = st.text_input("Please enter the bank name as provided above:", key="bank_name")
+        # bank_name = st.text_input("Please enter the bank name as provided above:", key="bank_name")
+        bank_name =details['BankName']
         cert_no_again = st.session_state['basic_info']['RSS ID']  # Assuming the certificate number is stored here
         
         if bank_name and cert_no_again:
