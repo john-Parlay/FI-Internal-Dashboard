@@ -384,7 +384,7 @@ def display_data():
                     # Fetch and display SBA details
                     bank_details = generate_complete_bank_details(cert_no_again, bank_name)
                     st.subheader("Bank Detailed Statistics and Visualizations")
-                    st.table(bank_details['stats_table'])  # Displaying statistics table
+                    st.dataframe(bank_details['stats_table'])  # Displaying statistics table
 
                     # Displaying graphs
                     st.plotly_chart(bank_details['fig_total_loan_volume'])
